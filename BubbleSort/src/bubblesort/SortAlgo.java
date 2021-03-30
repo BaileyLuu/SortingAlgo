@@ -27,37 +27,6 @@ public class SortAlgo {
         }while(changed);
         return intArray;
     }
-    
-    public int[]selection(int[]array2){
-        intArray = array2;
-        int iPos;
-        int iMin;
-        for(iPos = 0;iPos < intArray.length;iPos++){
-            iMin = iPos;
-            for(int i=iPos+1;i<intArray.length;i++){
-                if(intArray[i] < intArray[iMin]){
-                    iMin = i;
-                }
-            }if(iMin!=iPos){
-                int temp = intArray[iPos];
-                intArray[iPos] = intArray[iMin];
-                intArray[iMin] = temp;
-            }
-        }
-        return intArray;
-    }
-    public int[]insertion(int[]array3){
-        intArray=array3;
-        for(int i = 1; i < intArray.length;i++){
-            int value = intArray[i];
-            int j = i-1;
-            while(j>=0&&intArray[j]>value){
-                intArray[j+1] = intArray[j];
-                j = j-1;
-            }
-            intArray[j+1] = value;
-        }return intArray;
-    }
 }
 
 
